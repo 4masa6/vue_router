@@ -7,11 +7,11 @@ export default {
       title: 'HelloJSX',
       msg: 'This is JSX component sample.',
     })
-    return () => {
-      <div className="alert alert-warning">
+    return () => (
+      <div class="alert alert-warning">
         <h1>{data.title}</h1>
         <p>{data.msg}</p>
       </div>
-    }
+    )
   }
 }
