@@ -1,19 +1,26 @@
 <template>
-  <h1>{{ msg }}</h1>
-  <button @click="count++">count is: {{ count }}</button>
-  <p>Edit <code>components/HelloWorld.vue</code> to test hot module replacement.</p>
+  <div class="alert alert-primary">
+    <h1>{{ title }}</h1>
+    <p class="mt-3 h5">{{ data.msg }}</p>
+  </div>
 </template>
 
 <script>
+import { ref, reactive } from 'vue'
+
 export default {
-  name: 'HelloWorld',
   props: {
-    msg: String
+    title: String
   },
-  data() {
+  setup(props, context) {
+    const data = reactive({
+      msg: 'This is ref-value'
+    })
+    data.msg = context.attrs['msg'].toUpperCase()
     return {
-      count: 0
+      data
     }
   }
 }
 </script>
+
