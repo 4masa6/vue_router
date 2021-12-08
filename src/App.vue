@@ -1,10 +1,10 @@
 <template>
   <div id="app">
     <div>
-      <router-link to="/index/taro" class="btn btn-primary mx-2">
+      <router-link :to="{name: 'index', params: {name: 'Taro'}}" class="btn btn-primary mx-2">
         Go to Top
       </router-link>
-      <router-link to="/jsx/hanako" class="btn btn-warning">
+      <router-link :to="{name: 'jsx', params: {name: 'Hanako'}}" class="btn btn-warning">
         Go to JSX
       </router-link>
     </div>
